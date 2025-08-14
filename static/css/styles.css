@@ -1,0 +1,376 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #131221 0%, #16162d 50%, #1f0842 100%);
+    min-height: 100vh;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Remove old card styles and container styles */
+
+/* Typography */
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+h1 span:first-child {
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+}
+
+h1 span:last-child,
+h1:not(:has(span)) {
+    background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Form Styles */
+.url-form {
+    margin-top: 3rem;
+    max-width: 700px;
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.form-row .form-control {
+    flex: 1;
+}
+
+.alias-input {
+    width: 100%;
+    margin-top: 0;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: rgba(139, 92, 246, 0.8);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+/* Button Styles */
+.btn-primary {
+    background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+    border: none;
+    border-radius: 12px;
+    padding: 1.2rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.4);
+}
+
+/* Alert Styles */
+.alert-success {
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    color: #10b981;
+}
+
+.alert-success a {
+    color: #10b981;
+    text-decoration: none;
+    font-weight: 600;
+    word-break: break-all;
+}
+
+.alert-success a:hover {
+    text-decoration: underline;
+}
+
+/* Admin Page Styles */
+.admin-container {
+    min-height: 100vh;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.admin-card .table {
+  
+  --bs-table-color: #fff;
+  --bs-table-bg: rgba(255, 255, 255, 0.05);
+  --bs-table-striped-bg: rgba(255, 255, 255, 0.07);
+  --bs-table-striped-color: #fff;
+  --bs-table-hover-bg: rgba(255, 255, 255, 0.09);
+  --bs-table-hover-color: #fff;
+  --bs-border-color: rgba(255, 255, 255, 0.12);
+
+  color: var(--bs-table-color) !important;
+  border-color: var(--bs-border-color) !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+.admin-card .table > :not(caption) > * > * {
+  background-color: var(--bs-table-bg) !important;
+  color: var(--bs-table-color) !important;
+  border-bottom-color: var(--bs-border-color) !important;
+}
+
+
+.admin-card .table thead th {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%) !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+
+.admin-card .table.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: var(--bs-table-striped-bg) !important;
+  color: var(--bs-table-striped-color) !important;
+}
+.admin-card .table > tbody > tr:hover > * {
+  background-color: var(--bs-table-hover-bg) !important;
+  color: var(--bs-table-hover-color) !important;
+}
+
+
+.admin-card .table a {
+  color: #c7b9ff !important;
+}
+.admin-card .table a:hover {
+  color: #a992ff !important;
+  text-decoration: underline;
+}
+
+
+/* Table Styles */
+.table-responsive {
+    margin-top: 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.table {
+   background: rgba(255, 255, 255, 0.05) !important;
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.table th {
+     background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%) !important;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    padding: 1.5rem 1rem;
+    text-align: left;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table td {
+    color: #ffffff;
+    border: none;
+    padding: 1.5rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    vertical-align: middle;
+}
+
+.table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.table tbody tr:nth-child(even) {
+    background: #0f1010;
+}
+
+.table tbody tr:nth-child(even):hover {
+    background: #0b0b0b;
+}
+
+.table a {
+    color: #0c0c0c;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.table a:hover {
+    color: #8b5cf6;
+    text-decoration: underline;
+}
+
+/* Admin specific styles */
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: rgba(147, 51, 234, 0.2);
+    border: 1px solid rgba(147, 51, 234, 0.3);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-outline-light {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    background: transparent;
+    border-radius: 12px;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Admin Page Styles */
+.admin-container {
+    min-height: 100vh;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.admin-card {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+/* Admin Table Improvements - just better spacing */
+.admin-card .table-responsive {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.admin-card .table td {
+    word-break: break-word;
+    max-width: 300px;
+}
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .btn-primary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    
+    .hero-section {
+        padding: 1rem 0.5rem;
+    }
+}
